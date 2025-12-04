@@ -39,7 +39,7 @@ It provides a unified interface for managing assets across multiple privacy-focu
 ### 2. Making Privacy-First DeFi Accessible
 
 **The Problem:**
-- Privacy chains have amazing technology but terrible UX
+- Privacy chains have amazing technology but difficult UX
 - Learning curve is steep: shielded addresses, viewing keys, notes, etc.
 - Most users avoid privacy features because they're too complicated
 - No easy way to use private assets in DeFi protocols
