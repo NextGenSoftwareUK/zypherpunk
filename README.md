@@ -8,15 +8,15 @@
 
 ## Overview
 
-The **Zypherpunk Wallet** is a comprehensive privacy-first wallet solution built on the OASIS platform. It provides a unified interface for managing assets across multiple privacy-focused blockchains, with built-in support for private bridges, stablecoin minting, and advanced privacy features.
+The **Zypherpunk Wallet** is a privacy-first wallet solution built on the OASIS platform. 
+It provides a unified interface for managing assets across multiple privacy-focused blockchains, with built-in support for private bridges, stablecoin minting, and advanced privacy features.
 
 **Built for:** [Zypherpunk Hackathon](https://zypherpunk.xyz/) (Nov 12 - Dec 1, 2025)
 
 ## Why This Solution Matters
 
-We've built infrastructure that solves critical problems in the privacy-first, cross-chain DeFi ecosystem. Our solution doesn't just address hackathon requirements—it creates the foundation for the future of private finance.
 
-### Solving Provider Ecosystem Fragmentation
+### 1. Solving Provider Ecosystem Fragmentation
 
 **The Problem:**
 - Every blockchain ecosystem lives in isolation
@@ -36,7 +36,7 @@ We've built infrastructure that solves critical problems in the privacy-first, c
 - Interoperability while preserving each chain's unique features
 - Easier onboarding for new users
 
-### Making Privacy-First DeFi Accessible
+### 2. Making Privacy-First DeFi Accessible
 
 **The Problem:**
 - Privacy chains have amazing technology but terrible UX
@@ -58,7 +58,9 @@ We've built infrastructure that solves critical problems in the privacy-first, c
 - Financial privacy is accessible to everyone, not just crypto natives
 - Sets new standard for privacy-first wallet UX
 
-### Technical Innovation: OASIS as Integration Layer
+### Technical Innovation: OASIS Web4 as Integration Layer
+
+We leverage our own back-end, OASIS, to integrate all providers - allowing chains with totally different architectures to exist in a single place, without compromising on their USPs.
 
 **What Makes This Special:**
 - Provider abstraction layer that unifies chains with completely different architectures
