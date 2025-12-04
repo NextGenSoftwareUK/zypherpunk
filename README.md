@@ -75,18 +75,15 @@ We've built infrastructure that solves critical problems in the privacy-first, c
 
 ## Tracks Addressed
 
-| Track | Sponsor | Prize | Status | Completion |
-|-------|---------|-------|--------|------------|
-| **Track 1** | Aztec Labs - Private Bridge | $3,000 | Complete | 90% |
-| **Track 2** | Aztec Labs - Zcash <> Aztec Wallet | $3,000 | Complete | 95% |
-| **Track 3** | Aztec Labs - Zcash Backed Stablecoin | $3,000 | Complete | 100% |
-| **Track 4** | Miden - Private Bridge | $5,000 | Partial | 70% |
-| **Track 5** | pump.fun - Solana ↔ Zcash | $5,000 | Complete | 90% |
-| **Track 6** | Helius - Solana ↔ Zcash | $10,000 | Complete | 90% |
-| **Track 7** | Self-Custody & Wallet Innovation | $3,000 | Complete | 100% |
-
-**Total Prize Potential:** $32,000+  
-**Average Completion:** 91%
+| Track | Sponsor |
+|-------|---------|
+| **Track 1** | Aztec Labs - Private Bridge |
+| **Track 2** | Aztec Labs - Zcash <> Aztec Wallet |
+| **Track 3** | Aztec Labs - Zcash Backed Stablecoin |
+| **Track 4** | Miden - Private Bridge |
+| **Track 5** | pump.fun - Solana ↔ Zcash |
+| **Track 6** | Helius - Solana ↔ Zcash |
+| **Track 7** | Self-Custody & Wallet Innovation |
 
 ## Key Features
 
