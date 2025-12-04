@@ -117,6 +117,51 @@ We leverage our own back-end, OASIS, to integrate all providers - allowing chain
 - **Privacy Recommendations** based on activity
 - **Privacy Score Calculation**
 
+## Screenshots
+
+### Authentication & Wallet Overview
+
+![Sign-in using Private Avatar](docs/screenshots/Sign-in%20using%20Private%20Avatar.png)
+
+**Avatar Authentication**: The wallet uses OASIS avatar authentication to securely connect your identity. When you sign in with your avatar credentials, the system automatically links to the Keys/Wallet API and generates wallet addresses for all supported providers (Zcash, Aztec, Miden, Starknet, Solana, Ethereum) from a single keypair. This unified approach eliminates the need for multiple seed phrases while maintaining full self-custody.
+
+![Wallet Home Screen](docs/screenshots/Wallet%20home-screen.png)
+
+**Wallet Home Screen**: The main dashboard displays your total balance across all chains, along with quick access to all wallet functions including sending, receiving, swapping, privacy features, and stablecoin operations.
+
+### Privacy Features
+
+| Send Screen | Shielded Transaction | Privacy Drop | Claim Privacy Drop |
+|-------------|----------------------|-------------|-------------------|
+| ![Send Screen](docs/screenshots/Send%20screen.png) | ![Shielded Transaction](docs/screenshots/Shielded%20transaction.png) | ![Privacy Drop](docs/screenshots/Privacy%20Drop.png) | ![Claim Privacy Drop](docs/screenshots/Claim%20privacy%20Drop.png) |
+
+**Send Screen**: Initiate transactions across any supported chain with a unified interface. The send screen supports both transparent and shielded transactions depending on the chain.
+
+**Shielded Transaction**: Execute private transactions that hide sender, receiver, and amount details. The wallet automatically uses shielded pools for Zcash and private notes for Aztec when available.
+
+**Privacy Drop**: Create anonymous airdrops where recipients can claim tokens without revealing their identity. Perfect for privacy-preserving token distribution.
+
+**Claim Privacy Drop**: Users can claim privacy drops using viewing keys, maintaining anonymity while enabling verifiable claims. The system validates claims without exposing recipient addresses.
+
+### Asset Management
+
+![View Available Assets](View%20available%20assets.png)
+
+**Asset Overview:** View all available assets across your multi-chain wallets. The interface shows balances for each chain (including SOL and Zcash as shown), with real-time price data and quick access to detailed views for each asset.
+
+![Token Details with Price History](Token%20history%20(coingecko).png)
+
+**Token Details:** Detailed view of individual tokens showing current balance, price history from CoinGecko, transaction history, and asset-specific actions. The price charts provide historical context for informed decision-making.
+
+### Cross-Chain Swapping
+
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="docs/screenshots/Swap%20asset%20screen.png" alt="Swap Asset Screen" width="300"/>
+  <img src="docs/screenshots/Swap%20asset%20-%20choose%20asset.png" alt="Swap Asset - Choose Asset" width="300"/>
+</div>
+
+**Swap Interface**: The atomic swap interface supports cross-chain exchanges between all supported assets. Users can swap Zcash for Solana, Aztec for Ethereum, or any other supported pair. The interface shows available liquidity, exchange rates, and estimated fees. The bridge ensures atomic execution—either the entire swap completes or it rolls back, protecting users from partial failures.
+
 ## Addressing Specific Ecosystem Needs
 
 ### For Zcash Ecosystem
@@ -277,6 +322,119 @@ zypherpunk/
 - **[Stablecoin Implementation](docs/STABLECOIN_IMPLEMENTATION_COMPLETE.md)** - Stablecoin system details
 
 ## Architecture
+
+### Frontend Stack
+- **Framework:** Next.js 14 with App Router
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui
+- **State Management:** Zustand
+- **Charts:** Recharts
+- **QR Codes:** qrcode.react
+
+### Backend Stack
+- **Framework:** .NET Core 8
+- **Architecture:** OASIS Provider System
+- **Storage:** MongoDB / LocalFile
+- **Providers:** ZcashOASIS, AztecOASIS, MidenOASIS, StarknetOASIS, SolanaOASIS, EthereumOASIS
+
+### Key Technologies
+- **Address Derivation:** Blockchain-specific (Keccak-256, Ed25519, Pedersen Hash, Bech32)
+- **Price Oracle:** CoinGecko API
+- **Bridge:** Atomic swaps with technical accounts
+- **Privacy:** Viewing keys, shielded transactions, partial notes
+
+## Configuration
+
+### Environment Variables
+
+Create `frontend/.env.local`:
+
+```env
+# OASIS API URL
+NEXT_PUBLIC_OASIS_API_URL=https://localhost:5004
+
+# Use API proxy (for self-signed certificates)
+NEXT_PUBLIC_USE_API_PROXY=true
+```
+
+### API Configuration
+
+The wallet connects to OASIS API endpoints:
+
+- **Authentication:** `/api/avatar/authenticate`
+- **Wallet:** `/api/wallet/*`
+- **Bridge:** `/api/v1/orders`
+- **Stablecoin:** `/api/v1/stablecoin/*`
+
+## Privacy as Default, Not Afterthought
+
+**Our Approach:**
+- Privacy built into the foundation, not bolted on
+- Viewing keys enable compliance without breaking privacy
+- Privacy metrics help users understand their exposure
+- Cross-chain privacy that works seamlessly
+
+**Compliance Without Compromise:**
+- Viewing keys allow selective disclosure for auditors/regulators
+- Privacy preserved by default, transparency when needed
+- Proof that privacy and compliance can coexist
+
+**User Education:**
+- Privacy dashboard explains privacy levels
+- Recommendations help users improve their privacy
+- Makes complex concepts (viewing keys, shielded transactions) accessible
+
+## Impact Summary
+
+| Stakeholder | Problem Solved | Value Delivered |
+|------------|---------------|-----------------|
+| **Users** | Complex privacy UX, fragmented wallets | Simple, unified, privacy-first experience |
+| **Zcash** | Limited use cases, isolated ecosystem | Access to private DeFi, stablecoin collateral |
+| **Aztec** | User acquisition, collateral sourcing | ZEC-backed stablecoin, bridge from Zcash |
+| **Miden** | Ecosystem isolation | Integration into privacy-first ecosystem |
+| **Solana** | Limited privacy options | Privacy via cross-chain bridges |
+| **Industry** | Fragmented privacy solutions | Unified infrastructure for privacy-first DeFi |
+
+## Contributing
+
+This is a hackathon submission. For questions or feedback:
+
+- **Issues:** Open an issue on GitHub
+- **Repository:** https://github.com/NextGenSoftwareUK/zypherpunk
+
+## License
+
+MIT License
+
+## Acknowledgments
+
+- **OASIS Platform** - Infrastructure and provider system
+- **Zcash Foundation** - Privacy technology
+- **Aztec Labs** - Private smart contracts
+- **Miden** - Zero-knowledge VM
+- **All Hackathon Sponsors** - For the opportunity
+
+## Implementation Statistics
+
+- **Frontend Components:** 30+ React components
+- **Backend Controllers:** 3 major controllers
+- **API Endpoints:** 20+ REST endpoints
+- **Blockchain Providers:** 6 providers
+- **Lines of Code:** ~15,000+
+- **Tracks Addressed:** 7/7 (100%)
+
+## Links
+
+- **Repository:** https://github.com/NextGenSoftwareUK/zypherpunk
+- **OASIS Platform:** https://oasisplatform.world
+- **Hackathon:** https://zypherpunk.xyz/
+
+---
+
+**Built for the Zypherpunk Hackathon 2025**
+
+*Privacy-first. Cross-chain. Unified.*
 
 ### Frontend Stack
 - **Framework:** Next.js 14 with App Router
