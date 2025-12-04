@@ -338,6 +338,47 @@ zypherpunk/
 - **Bridge:** Atomic swaps with technical accounts
 - **Privacy:** Viewing keys, shielded transactions, partial notes
 
+### Unified Key Generation & Address Derivation
+
+The wallet generates addresses for all supported chains from a single keypair using blockchain-specific derivation methods. This eliminates the need for multiple seed phrases while maintaining compatibility with each chain's native address format.
+
+**How It Works:**
+1. **Single Keypair Generation:** A master keypair is generated using standard cryptographic methods
+2. **Provider-Specific Derivation:** Each blockchain's address is derived from the public key using that chain's specific algorithm
+3. **SDK Integration:** Native SDKs ensure addresses are valid and compatible with each blockchain's ecosystem
+
+**Integrated SDKs:**
+
+| Provider | SDK/Library | Purpose | Address Format |
+|----------|-------------|---------|----------------|
+| **Starknet** | [StarkSharp](https://github.com/project3fusion/StarkSharp) | Pedersen hash for address derivation | `0x` + 64 hex chars (66 total) |
+| **Zcash** | [Nerdbank.Zcash](https://github.com/dotnet/Nerdbank.Zcash) | Unified Address generation (transparent + shielded) | `utest1...` / `u1...` (Bech32m) |
+| **Ethereum** | [Nethereum](https://nethereum.com/) | Keccak-256 hashing for address derivation | `0x` + 40 hex chars (42 total) |
+| **Solana** | [Solnet](https://github.com/bmresearch/Solnet) | Ed25519 public key encoding | Base58 (32-44 chars) |
+| **Miden** | [Miden Python SDK](https://github.com/0xPolygonMiden/miden) | Bech32 address encoding | `mtst1...` / `mid1...` (37 chars) |
+| **Bitcoin/Zcash** | [NBitcoin](https://github.com/MetacoSA/NBitcoin) | RIPEMD160, Base58 encoding | Legacy formats |
+| **Cryptography** | BouncyCastle.Crypto | General cryptographic operations | Various |
+
+**Address Derivation Methods:**
+
+- **Ethereum/EVM Chains:** Keccak-256 hash of public key → last 20 bytes → `0x` prefix
+- **Starknet:** Pedersen hash of (account_class_hash, pedersen_hash(public_key, salt), constructor_calldata_hash) → 32 bytes → `0x` prefix
+- **Zcash:** SHA256 → RIPEMD160 → TransparentP2PKHReceiver → UnifiedAddress (Bech32m)
+- **Solana:** Ed25519 public key (32 bytes) → Base58 encoding
+- **Miden:** Public key → Miden SDK address generation → Bech32 encoding (`mtst1...` for testnet)
+- **Aztec:** Uses Ethereum-style addresses (Keccak-256 derivation)
+
+**Implementation Location:**
+- Core derivation logic: `OASIS Architecture/NextGenSoftware.OASIS.API.Core/Helpers/AddressDerivationHelper.cs`
+- Frontend integration: `zypherpunk-wallet-ui/lib/unifiedWallet.ts`
+- Backend API: Wallet creation endpoints automatically generate addresses for all providers
+
+**Benefits:**
+- **Single Seed Phrase:** One mnemonic generates all addresses
+- **Native Compatibility:** Each address format matches the blockchain's standard
+- **SDK Validation:** Native SDKs ensure addresses are valid and accepted by wallets/exchanges
+- **Future-Proof:** Easy to add new chains by implementing their derivation method
+
 ## Configuration
 
 ### Environment Variables
