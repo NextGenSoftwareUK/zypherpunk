@@ -1,6 +1,6 @@
 # Zypherpunk Wallet - OASIS Submission
 
-> A privacy-first, cross-chain wallet solution addressing 7 tracks of the Zypherpunk Hackathon
+> A privacy-first, cross-chain wallet solution addressing all 7 tracks of the Zypherpunk Hackathon
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
@@ -8,15 +8,15 @@
 
 ## Overview
 
-The **Zypherpunk Wallet** is a privacy-first wallet solution built on the OASIS platform. 
-It provides a unified interface for managing assets across multiple privacy-focused blockchains, with built-in support for private bridges, stablecoin minting, and advanced privacy features.
+The **Zypherpunk Wallet** is a comprehensive privacy-first wallet solution built on the OASIS platform. It provides a unified interface for managing assets across multiple privacy-focused blockchains, with built-in support for private bridges, stablecoin minting, and advanced privacy features.
 
 **Built for:** [Zypherpunk Hackathon](https://zypherpunk.xyz/) (Nov 12 - Dec 1, 2025)
 
 ## Why This Solution Matters
 
+We've built infrastructure that solves critical problems in the privacy-first, cross-chain DeFi ecosystem. Our solution doesn't just address hackathon requirements—it creates the foundation for the future of private finance.
 
-### 1. Solving Provider Ecosystem Fragmentation
+### Solving Provider Ecosystem Fragmentation
 
 **The Problem:**
 - Every blockchain ecosystem lives in isolation
@@ -36,10 +36,10 @@ It provides a unified interface for managing assets across multiple privacy-focu
 - Interoperability while preserving each chain's unique features
 - Easier onboarding for new users
 
-### 2. Making Privacy-First DeFi Accessible
+### Making Privacy-First DeFi Accessible
 
 **The Problem:**
-- Privacy chains have amazing technology but difficult UX
+- Privacy chains have amazing technology but terrible UX
 - Learning curve is steep: shielded addresses, viewing keys, notes, etc.
 - Most users avoid privacy features because they're too complicated
 - No easy way to use private assets in DeFi protocols
@@ -58,9 +58,7 @@ It provides a unified interface for managing assets across multiple privacy-focu
 - Financial privacy is accessible to everyone, not just crypto natives
 - Sets new standard for privacy-first wallet UX
 
-### Technical Innovation: OASIS Web4 as Integration Layer
-
-We leverage our own back-end, OASIS, to integrate all providers - allowing chains with totally different architectures to exist in a single place, without compromising on their USPs.
+### Technical Innovation: OASIS as Integration Layer
 
 **What Makes This Special:**
 - Provider abstraction layer that unifies chains with completely different architectures
@@ -133,12 +131,12 @@ We leverage our own back-end, OASIS, to integrate all providers - allowing chain
 
 | Send Screen | Shielded Transaction |
 |-------------|---------------------|
-| ![Send Screen](Send%20screen.png) | ![Shielded Transaction](Shielded%20transaction.png) |
+| ![Send Screen](docs/screenshots/Send%20screen.png) | ![Shielded Transaction](docs/screenshots/Shielded%20transaction.png) |
 | **Send Screen:** Send tokens across any supported chain with privacy options. The interface supports both transparent and shielded transactions, with automatic address validation and transaction fee estimation. | **Shielded Transactions:** Execute private transactions on Zcash and Aztec networks. Shielded transactions hide sender, recipient, and amount while maintaining full functionality. The wallet automatically manages shielded pools and viewing keys. |
 
 | Privacy Drop | Claim Privacy Drop |
 |--------------|-------------------|
-| ![Privacy Drop](Privacy%20Drop.png) | ![Claim Privacy Drop](Claim%20privacy%20Drop.png) |
+| ![Privacy Drop](docs/screenshots/Privacy%20Drop.png) | ![Claim Privacy Drop](docs/screenshots/Claim%20privacy%20Drop.png) |
 | **Privacy Drop:** Create and distribute private airdrops to multiple recipients. Privacy drops use shielded addresses to ensure recipient privacy while allowing the sender to track distribution through viewing keys. | **Claim Privacy Drop:** Recipients can claim privacy drops using their shielded addresses. The system automatically detects available drops and provides a simple one-click claiming interface while maintaining complete privacy. |
 
 ### Asset Management
@@ -147,7 +145,7 @@ We leverage our own back-end, OASIS, to integrate all providers - allowing chain
 
 **Asset Overview:** View all available assets across your multi-chain wallets. The interface shows balances for each chain (including SOL and Zcash as shown), with real-time price data and quick access to detailed views for each asset.
 
-![Token Details with Price History](Token%20history%20(coingecko).png)
+![Token Details with Price History](docs/screenshots/Token%20history%20(coingecko).png)
 
 **Token Details:** Detailed view of individual tokens showing current balance, price history from CoinGecko, transaction history, and asset-specific actions. The price charts provide historical context for informed decision-making.
 
@@ -155,7 +153,7 @@ We leverage our own back-end, OASIS, to integrate all providers - allowing chain
 
 | Swap Asset Screen | Choose Asset for Swap |
 |-------------------|----------------------|
-| ![Swap Asset Screen](Swap%20asset%20screen.png) | ![Choose Asset for Swap](Swap%20asset%20-%20choose%20asset.png) |
+| ![Swap Asset Screen](docs/screenshots/Swap%20asset%20screen.png) | ![Choose Asset for Swap](docs/screenshots/Swap%20asset%20-%20choose%20asset.png) |
 | **Swap Interface:** Initiate cross-chain swaps between any supported assets. The interface shows exchange rates, estimated fees, and transaction time. Swaps use atomic swap technology to ensure security. | **Asset Selection:** Choose from a wide range of supported assets for swapping. The wallet supports swaps between Zcash, Aztec, Solana, Ethereum, Starknet, and Miden, with real-time balance checking and availability indicators. |
 
 ## Addressing Specific Ecosystem Needs
