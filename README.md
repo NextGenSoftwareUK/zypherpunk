@@ -1,6 +1,6 @@
 # Zypherpunk Wallet - OASIS Submission
 
-> A privacy-first, cross-chain wallet solution addressing all 7 tracks of the Zypherpunk Hackathon
+> A privacy-first, cross-chain wallet solution addressing 7 tracks of the Zypherpunk Hackathon
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
