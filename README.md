@@ -1,4 +1,4 @@
-# Zypherpunk Wallet - OASIS Submission
+# Zephyr Wallet - OASIS Submission
 
 > A privacy-first, cross-chain wallet solution addressing all 7 tracks of the Zypherpunk Hackathon
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-The **Zypherpunk Wallet** is a comprehensive privacy-first wallet solution built on the OASIS platform. It provides a unified interface for managing assets across multiple privacy-focused blockchains, with built-in support for private bridges, stablecoin minting, and advanced privacy features.
+**Zephyr** is a comprehensive privacy-first wallet solution built on the OASIS platform. It provides a unified interface for managing assets across multiple privacy-focused blockchains, with built-in support for private bridges, stablecoin minting, and advanced privacy features.
 
 **Built for:** [Zypherpunk Hackathon](https://zypherpunk.xyz/) (Nov 12 - Dec 1, 2025)
 
@@ -469,7 +469,7 @@ MIT License
 
 **Built for the Zypherpunk Hackathon 2025**
 
-*Privacy-first. Cross-chain. Unified.*
+*Zephyr: Privacy-first. Cross-chain. Unified.*
 
 ### Frontend Stack
 - **Framework:** Next.js 14 with App Router
@@ -582,4 +582,4 @@ MIT License
 
 **Built for the Zypherpunk Hackathon 2025**
 
-*Privacy-first. Cross-chain. Unified.*
+*Zephyr: Privacy-first. Cross-chain. Unified.*

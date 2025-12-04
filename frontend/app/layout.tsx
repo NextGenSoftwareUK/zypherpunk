@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Zypherpunk Privacy Wallet",
-  description: "Privacy-first wallet for Zcash and Aztec networks",
+  title: "Zephyr Wallet",
+  description: "Privacy-first, cross-chain wallet for Zcash, Aztec, Miden, Starknet, Solana, and Ethereum",
 };
 
 export default function RootLayout({
