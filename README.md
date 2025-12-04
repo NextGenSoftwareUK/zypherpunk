@@ -119,7 +119,7 @@ We leverage our own back-end, OASIS, to integrate all providers - allowing chain
 
 ## Screenshots
 
-### Authentication & Wallet Overview
+### Authentication with Private Avatar
 
 ![Sign-in using Private Avatar](docs/screenshots/Sign-in%20using%20Private%20Avatar.png)
 
@@ -129,23 +129,21 @@ We leverage our own back-end, OASIS, to integrate all providers - allowing chain
 
 **Wallet Home Screen**: The main dashboard displays your total balance across all chains, along with quick access to all wallet functions including sending, receiving, swapping, privacy features, and stablecoin operations.
 
-### Privacy Features
+### Core Features
 
-| Send Screen | Shielded Transaction | Privacy Drop | Claim Privacy Drop |
-|-------------|----------------------|-------------|-------------------|
-| ![Send Screen](docs/screenshots/Send%20screen.png) | ![Shielded Transaction](docs/screenshots/Shielded%20transaction.png) | ![Privacy Drop](docs/screenshots/Privacy%20Drop.png) | ![Claim Privacy Drop](docs/screenshots/Claim%20privacy%20Drop.png) |
+| Send Screen | Shielded Transaction |
+|-------------|---------------------|
+| ![Send Screen](Send%20screen.png) | ![Shielded Transaction](Shielded%20transaction.png) |
+| **Send Screen:** Send tokens across any supported chain with privacy options. The interface supports both transparent and shielded transactions, with automatic address validation and transaction fee estimation. | **Shielded Transactions:** Execute private transactions on Zcash and Aztec networks. Shielded transactions hide sender, recipient, and amount while maintaining full functionality. The wallet automatically manages shielded pools and viewing keys. |
 
-**Send Screen**: Initiate transactions across any supported chain with a unified interface. The send screen supports both transparent and shielded transactions depending on the chain.
-
-**Shielded Transaction**: Execute private transactions that hide sender, receiver, and amount details. The wallet automatically uses shielded pools for Zcash and private notes for Aztec when available.
-
-**Privacy Drop**: Create anonymous airdrops where recipients can claim tokens without revealing their identity. Perfect for privacy-preserving token distribution.
-
-**Claim Privacy Drop**: Users can claim privacy drops using viewing keys, maintaining anonymity while enabling verifiable claims. The system validates claims without exposing recipient addresses.
+| Privacy Drop | Claim Privacy Drop |
+|--------------|-------------------|
+| ![Privacy Drop](Privacy%20Drop.png) | ![Claim Privacy Drop](Claim%20privacy%20Drop.png) |
+| **Privacy Drop:** Create and distribute private airdrops to multiple recipients. Privacy drops use shielded addresses to ensure recipient privacy while allowing the sender to track distribution through viewing keys. | **Claim Privacy Drop:** Recipients can claim privacy drops using their shielded addresses. The system automatically detects available drops and provides a simple one-click claiming interface while maintaining complete privacy. |
 
 ### Asset Management
 
-![View Available Assets](View%20available%20assets.png)
+![View Available Assets](docs/screenshots/View%20available%20assets.png)
 
 **Asset Overview:** View all available assets across your multi-chain wallets. The interface shows balances for each chain (including SOL and Zcash as shown), with real-time price data and quick access to detailed views for each asset.
 
@@ -155,12 +153,10 @@ We leverage our own back-end, OASIS, to integrate all providers - allowing chain
 
 ### Cross-Chain Swapping
 
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-  <img src="docs/screenshots/Swap%20asset%20screen.png" alt="Swap Asset Screen" width="300"/>
-  <img src="docs/screenshots/Swap%20asset%20-%20choose%20asset.png" alt="Swap Asset - Choose Asset" width="300"/>
-</div>
-
-**Swap Interface**: The atomic swap interface supports cross-chain exchanges between all supported assets. Users can swap Zcash for Solana, Aztec for Ethereum, or any other supported pair. The interface shows available liquidity, exchange rates, and estimated fees. The bridge ensures atomic execution—either the entire swap completes or it rolls back, protecting users from partial failures.
+| Swap Asset Screen | Choose Asset for Swap |
+|-------------------|----------------------|
+| ![Swap Asset Screen](Swap%20asset%20screen.png) | ![Choose Asset for Swap](Swap%20asset%20-%20choose%20asset.png) |
+| **Swap Interface:** Initiate cross-chain swaps between any supported assets. The interface shows exchange rates, estimated fees, and transaction time. Swaps use atomic swap technology to ensure security. | **Asset Selection:** Choose from a wide range of supported assets for swapping. The wallet supports swaps between Zcash, Aztec, Solana, Ethereum, Starknet, and Miden, with real-time balance checking and availability indicators. |
 
 ## Addressing Specific Ecosystem Needs
 
